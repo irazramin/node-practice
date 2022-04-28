@@ -20,7 +20,7 @@ const run = async () => {
   await client.connect();
   const userCollection = client.db('practice2').collection('practiceUser2');
   try {
-    app.get('/', async (req, res) => {
+    app.get('/user', async (req, res) => {
       const query = {};
 
       const cursor = userCollection.find(query);
